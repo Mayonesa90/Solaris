@@ -22,8 +22,21 @@ async function getPlanets(planet) {
         
         switch (planet) {           // Hämtar information om rätt planet och skickar vidare till funktion
             case 0: // Solen
-                console.log(planets[0]);
-                div.innerHTML = planets[0].name;
+                
+                div.innerHTML = `
+                <h2 class="title">${planets[0].name}</h2>
+                <h4 class="subtitle">${planets[0].latinName}</h4>
+                <p class="text">${planets[0].desc}</p>
+                <div class="info">
+                    <div class="info-part>
+                        <p class="info-part>
+                            <strong>OMKRETS</strong><br>
+                            ${planets[0].circumference} km</p>
+                    </div>`;
+                // skicka i till funktion
+                //typ:
+                // let i = 0
+                //createDiv(i)
                 break;
             case 1: // Merkurius
                 console.log(planets[1]);
@@ -59,3 +72,4 @@ async function getPlanets(planet) {
 }
 
 getPlanets(0)
+
