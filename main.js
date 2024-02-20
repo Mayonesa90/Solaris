@@ -2,22 +2,52 @@
 
 // Import 
 import { getPlanets } from "./modules/api.js";
-import { display } from "./modules/display.js"
+import { displayPlanet } from "./modules/display.js"
 
 let planets = await getPlanets();
 
-console.log(planets)
+// Node selection
+const solBtn = document.querySelector(".solen"),
+    merBtn = document.querySelector(".merkurius"),
+    venBtn = document.querySelector(".venus"),
+    jorBtn = document.querySelector(".jorden"),
+    marBtn = document.querySelector(".mars"),
+    jupBtn = document.querySelector(".jupiter"),
+    satBtn = document.querySelector(".saturnus"),
+    uraBtn = document.querySelector(".uranus"),
+    nepBtn = document.querySelector(".neptunus");
 
-planets.forEach((planet) => {
-    const name = planet.name;
-    const latinName = planet.latinName;
-    const desc = planet.desc;
-    const circumference = planet.circumference;
-    const maxTemp = planet.temp.day;
-    const distFromSun = planet.distance;
-    const minTemp = planet.temp.night;;
-    const moons = (planet.moons.length > 0) ? planet.moons : " " ;
+// Event listeners
+
+solBtn.addEventListener("click", () => {
+    displayPlanet(planets, 0);
+    
 })
+merBtn.addEventListener("click", () => {
+    displayPlanet(planets, 1);
+})
+venBtn.addEventListener("click", () => {
+    displayPlanet(planets, 2);
+})
+jorBtn.addEventListener("click", () => {
+    displayPlanet(planets, 3);
+})
+marBtn.addEventListener("click", () => {
+    displayPlanet(planets, 4);
+})
+jupBtn.addEventListener("click", () => {
+    displayPlanet(planets, 5);
+})
+satBtn.addEventListener("click", () => {
+    displayPlanet(planets, 6);
+})
+uraBtn.addEventListener("click", () => {
+    displayPlanet(planets, 7);
+})
+nepBtn.addEventListener("click", () => {
+    displayPlanet(planets, 8);
+})
+
 
 
 
