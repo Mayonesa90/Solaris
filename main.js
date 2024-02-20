@@ -2,13 +2,22 @@
 
 // Import 
 import { getPlanets } from "./modules/api.js";
+import { display } from "./modules/display.js"
 
 let planets = await getPlanets();
+
 console.log(planets)
 
-// Node selectors
-let div = document.querySelector("#test");
-
+planets.forEach((planet) => {
+    const name = planet.name;
+    const latinName = planet.latinName;
+    const desc = planet.desc;
+    const circumference = planet.circumference;
+    const maxTemp = planet.temp.day;
+    const distFromSun = planet.distance;
+    const minTemp = planet.temp.night;;
+    const moons = (planet.moons.length > 0) ? planet.moons : " " ;
+})
 
 
 
