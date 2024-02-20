@@ -24,6 +24,11 @@ function generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, dis
     newDiv = document.createElement("div");
     newDiv.classList.add("newDiv");
     newDiv.innerHTML = `
+    <div class="planet">
+        <div class="planet-inside">
+            <div class="planet-inside-planet"></div>
+        </div>
+    </div>
     <div class="container">
         <h1 class="title">${name}</h1>
         <h3 class="subtitle">${latinName}</h3>
