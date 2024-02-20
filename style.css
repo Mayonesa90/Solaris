@@ -69,6 +69,10 @@ body {
     z-index: 50;
 }
 
+.--planet:hover {
+    cursor: pointer;
+}
+
 .merkurius {
     width: 14px;
     height: 14px;
@@ -138,10 +142,20 @@ body {
    font-size: 18px;
    font-weight: 200;
    font-style: condensed;
-   max-width:650px;
    z-index: 100;
    position: absolute;
-    line-height: 35px;
+   line-height: 35px;
+   top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7A91A7; // ÄNDRA BAKGRUND
+}
+
+.container {
+    max-width:650px
 }
 
 .facts-container {
@@ -157,4 +171,8 @@ body {
 .fact {
     display: flex;
     flex-direction: column;
+}
+
+.--last-fact {
+    width: 100px
 }

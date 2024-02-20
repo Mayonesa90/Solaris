@@ -5,8 +5,8 @@ export function displayPlanet(planets, currentPlanet) {
     let planetInfo = planets.filter((planet, i) => i === currentPlanet);
 
     planetInfo.forEach((planet) => {
-    const name = planet.name,
-    latinName = planet.latinName,
+    const name = planet.name.toUpperCase(),
+    latinName = planet.latinName.toUpperCase(),
     desc = planet.desc,
     circumference = planet.circumference,
     maxTemp = planet.temp.day,
@@ -21,13 +21,10 @@ export function displayPlanet(planets, currentPlanet) {
 function generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, distFromSun, moons) {
    
     let newDiv;
-
-    if (body.contains(newDiv)) {
-        body.removeChild(newDiv)
-    } else {
-        newDiv = document.createElement("div");
-        newDiv.classList.add("newDiv");
-        newDiv.innerHTML = `
+    newDiv = document.createElement("div");
+    newDiv.classList.add("newDiv");
+    newDiv.innerHTML = `
+    <div class="container">
         <h1 class="title">${name}</h1>
         <h3 class="subtitle">${latinName}</h3>
         <p class="text-body">${desc}</p>
@@ -37,11 +34,13 @@ function generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, dis
             <div class="fact"><strong>MAX TEMPERATUR</strong>${maxTemp}C</div>
             <div class="fact"><strong>MIN TEMPERATUR</strong>${minTemp}C</div>
         </div>
-        <div class="fact"><strong>MÅNAR</strong>${moons}</strong</div>
-        `
-        body.appendChild(newDiv);
-    }
-
+        <div class="fact --last-fact"><strong>MÅNAR</strong>${moons}</div>
+    </div>
+    `
+    body.appendChild(newDiv);
+    
+    newDiv.addEventListener("click", () => {
+        body.removeChild(newDiv)
+    } )
    
-    console.log(newDiv)
 }
