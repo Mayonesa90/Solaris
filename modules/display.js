@@ -43,6 +43,8 @@ function generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, dis
     </div>
     `
     body.appendChild(newDiv);
+    const planetColor = document.querySelector(".planet-inside-planet");
+    planetColor.style.backgroundColor = `var(--${name})`
     
     newDiv.addEventListener("click", () => {
         body.removeChild(newDiv)
