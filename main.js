@@ -17,11 +17,13 @@ const solBtn = document.querySelector(".solen"),
     jupBtn = document.querySelector(".jupiter"),
     satBtn = document.querySelector(".saturnus"),
     uraBtn = document.querySelector(".uranus"),
-    nepBtn = document.querySelector(".neptunus");
-    // presentName = document.querySelector(".presentName");
+    nepBtn = document.querySelector(".neptunus"),
+    searchParam = document.querySelector("#searchParam"),
+    searchBtn = document.querySelector("#searchBtn");
 
 
-// Event listeners
+// Event listeners - PLANETS CLICK
+
 solBtn.addEventListener("click", () => {
     displayPlanet(planets, 0);
 })
@@ -51,7 +53,7 @@ nepBtn.addEventListener("click", () => {
 })
 
 
-
+// Event listeners - PLANETS HOVER
 
 solBtn.addEventListener("mouseenter", () => {
     presentation(solBtn, "SOLEN");
@@ -89,4 +91,53 @@ nepBtn.addEventListener("mouseenter", () => {
     presentation(nepBtn, "NEPTUNUS");
 })
 
+// Event listeners - SEARCHBAR
 
+searchBtn.addEventListener("click", () => {
+
+    let searchPlanet;
+
+    switch (searchParam.value.toUpperCase()) {
+        case "SOLEN":
+            searchPlanet = 0;
+            break;
+        case "MERKURIUS":
+            searchPlanet = 1;
+            break;
+        case "VENUS":
+            searchPlanet = 2;
+            break;
+        case "JORDEN":
+            searchPlanet = 3;
+            break;
+        case "MARS":
+            searchPlanet = 4;
+            break;
+        case "JUPITER":
+            searchPlanet = 5;
+            break;
+        case "SATURNUS":
+            searchPlanet = 6;
+            break;
+        case "URANUS":
+            searchPlanet = 7;
+            break;
+        case "NEPTUNUS":
+            searchPlanet = 8;
+            break;
+        default:
+            console.log("error");
+    }
+    displayPlanet(planets, searchPlanet)
+    
+})
+
+
+// Tar bort placeholder vid klick och lägger tillbaks vid mouseout
+searchParam.addEventListener("click", () => {
+    searchParam.placeholder = "";
+
+    searchParam.addEventListener("mouseout", () => {
+        searchParam.placeholder = "Sök planet här...";
+    })
+})

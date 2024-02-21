@@ -1,3 +1,7 @@
+// BESKRIVNING
+// Denna modul är till för att sätta ihop informationen om den gällande planeten
+// i en div som displayas
+
 const body = document.querySelector("body");
 
 export function displayPlanet(planets, currentPlanet) {
