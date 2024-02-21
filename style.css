@@ -67,10 +67,57 @@ body {
     right: 0;
 }
 
+/* Searchbar */
+
+.searchbar {
+    position: absolute;
+    top: 90px;
+    left: 130px;
+    z-index: 50;
+}
+
+#searchParam {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white; 
+    font-size: 18px;
+    font-weight: 200;
+    font-style: condensed;
+    background: transparent;
+    border-color: transparent;
+    border-bottom: 1px solid white;
+
+    &::placeholder {
+        color: white;
+    }
+
+   &:focus, &:active {
+    outline: none;
+   }
+}
+
+#searchBtn {
+    font-size: 50px;
+    font-weight: 100;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    background: transparent;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+/* Solen */
+
 .solen {
     position: absolute;
     z-index: 1;
 }
+
+/* MAIN */
 
 .main {
     display: flex;
@@ -91,9 +138,25 @@ body {
     z-index: 50;
 }
 
+/* Namnpresentation */
+
 .--planet:hover {
     cursor: pointer;
     animation: bounce 3s;
+}
+
+.presentName {
+    display: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white; 
+    font-size: 18px;
+    font-weight: 200;
+    font-style: condensed;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    position: absolute;
+    left: 190px;
+    top: 260px
 }
 
 .merkurius {
@@ -102,6 +165,8 @@ body {
     border-radius: 100%;
     background-color: var(--MERKURIUS);
 }
+
+/* Planeterna */
 
 .venus {
     width: 26px;
@@ -152,12 +217,16 @@ body {
     border-radius: 100%;
 }
 
+/* Footer */
+
 .footer {
     position: absolute;
     place-self: center;
     bottom: -200px;
     
 }
+
+/* Planetpresentation */
 
 .newDiv {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -237,19 +306,7 @@ body {
     width: 100px
 }
 
-.presentName {
-    display: none;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: white; 
-    font-size: 18px;
-    font-weight: 200;
-    font-style: condensed;
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    position: absolute;
-    left: 190px;
-    top: 260px
-}
+/* Bakgrundsstjärnor */
 
 .star {
     width: 6px;

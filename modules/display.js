@@ -36,8 +36,8 @@ function generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, dis
         <div class="facts-container">
             <div class="fact"><strong>OMKRETS</strong>${circumference} km</div>
             <div class="fact"><strong>KM FRÅN SOLEN</strong>${distFromSun} km</div>
-            <div class="fact"><strong>MAX TEMPERATUR</strong>${maxTemp}C</div>
-            <div class="fact"><strong>MIN TEMPERATUR</strong>${minTemp}C</div>
+            <div class="fact"><strong>MAX TEMPERATUR</strong>${maxTemp} ℃</div>
+            <div class="fact"><strong>MIN TEMPERATUR</strong>${minTemp} ℃</div>
         </div>
         <div class="fact --last-fact"><strong>MÅNAR</strong>${moons}</div>
     </div>
