@@ -41,6 +41,42 @@ function generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, dis
         </div>
         <div class="fact --last-fact"><strong>MÅNAR</strong>${moons}</div>
     </div>
+    <div class="star --pos1"></div>
+    <div class="star --pos2"></div>
+    <div class="star --pos3"></div>
+    <div class="small-star --pos4"></div>
+    <div class="star --pos5"></div>
+    <div class="small-star --pos6"></div>
+    <div class="small-star --pos7"></div>
+    <div class="star --pos8"></div>
+    <div class="star --pos9"></div>
+    <div class="small-star --pos10"></div>
+    <div class="small-star --pos11"></div>
+    <div class="small-star --pos12"></div>
+    <div class="star --pos13"></div>
+    <div class="star --pos14"></div>
+    <div class="star --pos15"></div>
+    <div class="small-star --pos16"></div>
+    <div class="small-star --pos17"></div>
+    <div class="star --pos18"></div>
+    <div class="star --pos19"></div>
+    <div class="small-star --pos20"></div>
+    <div class="star --pos21"></div>
+    <div class="small-star --pos22"></div>
+    <div class="small-star --pos23"></div>
+    <div class="star --pos24"></div>
+    <div class="star --pos25"></div>
+    <div class="star --pos26"></div>
+    <div class="star --pos27"></div>
+    <div class="star --pos28"></div>
+    <div class="small-star --pos29"></div>
+    <div class="small-star --pos30"></div>
+    <div class="small-star --pos31"></div>
+    <div class="star --pos32"></div>
+    <div class="star --pos33"></div>
+    <div class="small-star --pos34"></div>
+    <div class="star --pos35"></div>
+    <div class="star --pos36"></div>
     `
     body.appendChild(newDiv);
     const planetColor = document.querySelector(".planet-inside-planet");

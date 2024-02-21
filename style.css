@@ -177,6 +177,7 @@ body {
     background: rgb(12,22,77);
     background: linear-gradient(90deg, rgba(12,22,77,1) 0%, rgba(25,11,34,1) 100%);
     padding: 50px 0 300px 0;
+    padding-top: 100px;
 }
 
 .planet {
@@ -245,8 +246,205 @@ body {
     font-style: condensed;
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
-    /* animation-fill-mode: forwards; */
     position: absolute;
     left: 190px;
     top: 260px
+}
+
+.star {
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    filter: blur(3px);
+}
+
+.small-star {
+    width: 3px;
+    height: 3px;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    filter: blur(3px);
+}
+
+.--pos1 {
+    top: 98px;
+    right: 154px;
+}
+
+.--pos2 {
+    top: 127px;
+    right: 256px;
+}
+
+.--pos3 {
+    top: 126px;
+    right: 379px;
+}
+
+.--pos4 {
+    top: 204px;
+    right: 140px;
+}
+
+.--pos5 {
+    top: 237px;
+    right: 230px;
+}
+
+.--pos6 {
+    top: 210px;
+    right: 320px;
+}
+
+.--pos7 {
+    top: 207px;
+    right: 410px;
+}
+
+.--pos8 {
+    top: 385px;
+    right: 109px;
+}
+
+.--pos9 {
+    top: 385px;
+    right: 276px;
+}
+
+.--pos10 {
+    top: 306px;
+    right: 358px;
+}
+
+.--pos11 {
+    top: 271px;
+    right: 463px;
+}
+
+.--pos12 {
+    top: 448px;
+    right: 185px;
+}
+
+.--pos13{
+    top: 602px;
+    right: 115px;
+}
+
+.--pos14 {
+    top: 833px;
+    right: 50px;
+}
+
+.--pos15 {
+    top: 548px;
+    right: 206px;
+}
+
+.--pos16 {
+    top: 305px;
+    right: 508px;
+}
+
+.--pos17 {
+    top: 302px;
+    right: 598px;
+}
+
+.--pos18 {
+    top: 268px;
+    right: 697px;
+}
+
+.--pos19 {
+    top: 328px;
+    right: 860px;
+}
+
+.--pos20 {
+    top: 255px;
+    right: 984px;
+}
+
+.--pos21 {
+    top: 284px;
+    right: 1155px;
+}
+
+.--pos22 {
+    top: 353px;
+    right: 555px;
+}
+
+.--pos23 {
+    top: 388px;
+    right: 508px;
+}
+
+.--pos24 {
+    top: 596px;
+    right: 282px;
+}
+
+.--pos25 {
+    top: 696px;
+    right: 232px;
+}
+
+.--pos26 {
+    top: 764px;
+    right: 300px;
+}
+
+.--pos27 {
+    top: 671px;
+    right: 370px;
+}
+
+.--pos28 {
+    top: 511px;
+    right: 411px;
+}
+
+.--pos29 {
+    top: 401px;
+    right: 387px;
+}
+
+.--pos30 {
+    top: 436px;
+    right: 699px;
+}
+
+.--pos31 {
+    top: 512px;
+    right: 626px;
+}
+
+.--pos32 {
+    top: 643px;
+    right: 523px;
+}
+
+.--pos33 {
+    top: 764px;
+    right: 467px;
+}
+
+.--pos34 {
+    top: 659px;
+    right: 678px;
+}
+
+.--pos35 {
+    top: 501px;
+    right: 775px;
+}
+
+.--pos36 {
+    top: 811px;
+    right: 632px;
 }
