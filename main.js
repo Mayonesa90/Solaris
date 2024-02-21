@@ -129,13 +129,15 @@ searchBtn.addEventListener("click", () => {
             console.log("error");
     }
     displayPlanet(planets, searchPlanet)
-    
+    searchParam.value = "";
 })
 
 
 // Tar bort placeholder vid klick och lägger tillbaks vid mouseout
 searchParam.addEventListener("click", () => {
-    searchParam.placeholder = "";
+    // searchParam.placeholder = "";
+    // searchParam.placeholder.style.color = "rgba(255, 255, 255, 0.5)";
+    
 
     searchParam.addEventListener("mouseout", () => {
         searchParam.placeholder = "Sök planet här...";
