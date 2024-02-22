@@ -122,7 +122,7 @@ searchParam.addEventListener("keypress", (event) => {
         identifyPlanet(searchParam.value.toUpperCase())
         displayPlanet(planets, searchPlanet) // Skickar planeterna som sparats i en variabel samt värdet på aktuell planet 
         searchParam.value = ""; // Återställer sökrutan efter man klickat
-        searchPlanet = null; //Återställer värdet på sökningen
+        searchPlanet = null; //Återställer värdet på sökningen (annars visades det senaste sökresultatet)
     } 
 })
 

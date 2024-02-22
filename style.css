@@ -341,7 +341,7 @@ body {
     position: absolute;
     left: -1200px;
     z-index: 1;
-    top: -300px;
+    top: -200px;
 }
 
 .planet-inside {
@@ -405,7 +405,7 @@ body {
     border-radius: 50%;
     background-color: var(--star);
     position: absolute;
-    filter: blur(2px);
+    filter: blur(1px);
 }
 
 .small-star {
@@ -580,7 +580,7 @@ body {
 .--pos28 {
     top: 511px;
     right: 411px;
-    animation: fade 1240ms infinite
+    animation: fade 2240ms infinite
 }
 
 .--pos29 {
