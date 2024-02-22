@@ -3,6 +3,7 @@
 // i en div som displayas
 
 const body = document.querySelector("body");
+let moonString;
 
 export function displayPlanet(planets, currentPlanet) {
 
@@ -17,6 +18,8 @@ export function displayPlanet(planets, currentPlanet) {
     distFromSun = planet.distance,
     minTemp = planet.temp.night,
     moons = (planet.moons.length > 0) ? planet.moons : "Inga månar" ;
+    moonString = moons.map((moon) => moon).join(", ");
+
     return generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, distFromSun, moons)
     })   
 }
@@ -43,7 +46,7 @@ function generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, dis
             <div class="fact"><strong>MAX TEMPERATUR</strong>${maxTemp} ℃</div>
             <div class="fact"><strong>MIN TEMPERATUR</strong>${minTemp} ℃</div>
         </div>
-        <div class="fact --last-fact"><strong>MÅNAR</strong>${moons}</div>
+        <div class="fact --last-fact"><strong>MÅNAR</strong>${moonString}</div>
     </div>
     <div class="star --pos1"></div>
     <div class="star --pos2"></div>
@@ -84,7 +87,7 @@ function generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, dis
     `
     body.appendChild(newDiv);
     const planetColor = document.querySelector(".planet-inside-planet");
-    planetColor.style.backgroundColor = `var(--${name})`
+    planetColor.style.backgroundColor = `var(--${name})` // Här ändrar planeten färg till den matchande variabeln
     
     newDiv.addEventListener("click", () => {
         body.removeChild(newDiv)
