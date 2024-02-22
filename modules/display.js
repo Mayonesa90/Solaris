@@ -13,19 +13,20 @@ export function displayPlanet(planets, currentPlanet) {
     const name = planet.name.toUpperCase(),
     latinName = planet.latinName.toUpperCase(),
     desc = planet.desc,
-    circumference = planet.circumference,
+    circumference = planet.circumference.toLocaleString(),
     maxTemp = planet.temp.day,
-    distFromSun = planet.distance,
+    distFromSun = planet.distance.toLocaleString(),
     minTemp = planet.temp.night,
     moons = (planet.moons.length > 0) ? planet.moons.map((moon) => moon).join(", ") : "Inga månar" ; // Kollar om planeten har månar och skapar en ny sträng med mellanrum om den har det, annars ersätts det med en text
-
     return generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, distFromSun, moons)
     })   
+    
+
 }
 
 
 function generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, distFromSun, moons) {
-   
+    
     let newDiv;
     newDiv = document.createElement("div");
     newDiv.classList.add("newDiv");
@@ -93,3 +94,4 @@ function generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, dis
     } )
    
 }
+
