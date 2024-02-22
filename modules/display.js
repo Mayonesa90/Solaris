@@ -26,7 +26,8 @@ export function displayPlanet(planets, currentPlanet) {
     minTemp = planet.temp.night,
     moons = (planet.moons.length > 0) ? planet.moons.map((moon) => moon).join(", ") : "Inga månar" ; // Kollar om planeten har månar och skapar en ny sträng med mellanrum om den har det, annars ersätts det med en text
     return generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, distFromSun, moons)
-    })   
+    })
+    
 }
 
 // 2. Som sedan skickas vidare till denna funktion som sätter ihop diven

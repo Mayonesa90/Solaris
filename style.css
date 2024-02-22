@@ -142,8 +142,12 @@ body {
     font-family: var(--body-text);
     color: white;
     font-weight: 200;
-    padding-top: 15px;
     animation: fadeInAnimation 1s;
+    background-color: rgba(243, 74, 74, 0.85);
+    padding: 20px 15px;
+    width: max-content;
+    border-radius: 0 25px 25px 25px;
+    margin-top: 10px;
 }
 
 /* Solen */

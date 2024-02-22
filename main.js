@@ -5,11 +5,13 @@ import { getPlanets } from "./modules/api.js";
 import { displayPlanet } from "./modules/display.js";
 import { presentation } from "./modules/presentation.js";
 import { createErrorMsg } from "./modules/error.js";
+// import { identifyPlanet } from "./modules/identify.js";
 
 
 // Global variables
 let planets = await getPlanets(); // sparar alla planeterna i en variabel när api funktionen är klar
 let searchPlanet;
+// let searchPlanet = await identifyPlanet();
 
 
 // Node selection
@@ -88,11 +90,47 @@ nepBtn.addEventListener("mouseenter", () => {
 
 // Event listener - SEARCHBAR
 searchBtn.addEventListener("click", () => {
-
-    // let searchPlanet;
     
-    switch (searchParam.value.toUpperCase()) { // Här tar den sökordet, gör om till uppercase, och ser om den matchar följande cases. 
-        case "SOLEN":                          // Om den gör det skickas rätt värde till display funktionen, om inget matchar kallar den på errorfunktionen
+    identifyPlanet(searchParam.value.toUpperCase())
+    
+    displayPlanet(planets, searchPlanet) // Skickar planeterna som sparats i en variabel samt värdet på aktuell planet 
+    searchParam.value = ""; // Återställer sökrutan efter man klickat
+    searchPlanet = null; //Återställer värdet på sökningen
+})
+
+
+// Event listener - SEARCHBAR
+
+searchParam.addEventListener("click", () => {
+    
+    if (searchBar.children.length > 2) { // Tar bort eventuellt felmeddelande när man klickar på sökrutan
+        searchBar.removeChild(searchBar.children[2]);
+        } 
+
+    searchParam.placeholder = ""; // Gör sökrutan tom om man klickar på den (tar bort placeholdern)
+    
+    searchParam.addEventListener("mouseout", () => { // Lägger till placeholdertext igen när musen är utanför sökrutan
+        searchParam.placeholder = "Sök planet här...";
+    })
+
+})
+
+searchParam.addEventListener("keypress", (event) => {
+
+    if (event.key === "Enter") {
+
+        identifyPlanet(searchParam.value.toUpperCase())
+        displayPlanet(planets, searchPlanet) // Skickar planeterna som sparats i en variabel samt värdet på aktuell planet 
+        searchParam.value = ""; // Återställer sökrutan efter man klickat
+        searchPlanet = null; //Återställer värdet på sökningen
+    } 
+})
+
+
+
+function identifyPlanet(searchValue) {
+    switch (searchValue) { // Här tar den sökordet och ser om den matchar följande cases. 
+        case "SOLEN":      // Om den gör det skickas rätt värde till display funktionen, om inget matchar kallar den på errorfunktionen
             searchPlanet = 0;
             break;
         case "MERKURIUS":
@@ -122,23 +160,4 @@ searchBtn.addEventListener("click", () => {
         default:
             createErrorMsg();
     }
-    displayPlanet(planets, searchPlanet) // Skickar planeterna som sparats i en variabel samt värdet på aktuell planet 
-    searchParam.value = ""; // Återställer sökrutan efter man klickat
-})
-
-
-// Event listener - SEARCHBAR
-
-searchParam.addEventListener("click", () => {
-    
-    if (searchBar.children.length > 2) { // Tar bort eventuellt felmeddelande när man klickar på sökrutan
-        searchBar.removeChild(searchBar.children[2]);
-        } 
-
-    searchParam.placeholder = ""; // Gör sökrutan tom om man klickar på den (tar bort placeholdern)
-    
-    searchParam.addEventListener("mouseout", () => { // Lägger till placeholdertext igen när musen är utanför sökrutan
-        searchParam.placeholder = "Sök planet här...";
-    })
-
-})
+}
