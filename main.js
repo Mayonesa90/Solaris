@@ -4,6 +4,7 @@
 import { getPlanets } from "./modules/api.js";
 import { displayPlanet } from "./modules/display.js";
 import { presentation } from "./modules/presentation.js";
+import { createErrorMsg } from "./modules/error.js";
 
 let planets = await getPlanets();
 
@@ -96,6 +97,7 @@ nepBtn.addEventListener("mouseenter", () => {
 searchBtn.addEventListener("click", () => {
 
     let searchPlanet;
+    
 
     switch (searchParam.value.toUpperCase()) {
         case "SOLEN":
@@ -126,7 +128,7 @@ searchBtn.addEventListener("click", () => {
             searchPlanet = 8;
             break;
         default:
-            console.log("error");
+            createErrorMsg();
     }
     displayPlanet(planets, searchPlanet)
     searchParam.value = "";
@@ -134,12 +136,19 @@ searchBtn.addEventListener("click", () => {
 
 
 // Tar bort placeholder vid klick och lägger tillbaks vid mouseout
-searchParam.addEventListener("click", () => {
-    // searchParam.placeholder = "";
-    // searchParam.placeholder.style.color = "rgba(255, 255, 255, 0.5)";
-    
 
+const searchBar = document.querySelector(".searchbar");
+
+searchParam.addEventListener("click", () => {
+    
+    if (searchBar.children.length > 2) {
+        searchBar.removeChild(searchBar.children[2]);
+        } 
+
+    searchParam.placeholder = "";
+    
     searchParam.addEventListener("mouseout", () => {
         searchParam.placeholder = "Sök planet här...";
     })
+
 })
