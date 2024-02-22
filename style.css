@@ -229,6 +229,18 @@ body {
     border-radius: 50%;
     animation: bounce 3s;
     animation-delay: 750ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.saturnus-ring {
+    width: 218px;
+    height: 5.5px;
+    border-radius: 50%;
+    transform: rotate(0.4turn);
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
 }
 
 .uranus {
