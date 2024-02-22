@@ -89,6 +89,22 @@ function generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, dis
     <div class="small-star --pos34"></div>
     <div class="star --pos35"></div>
     <div class="star --pos36"></div>
+    <div class="small-star --pos37"></div>
+    <div class="star --pos38"></div>
+    <div class="star --pos39"></div>
+    <div class="small-star --pos40"></div>
+    <div class="small-star --pos41"></div>
+    <div class="star --pos42"></div>
+    <div class="small-star --pos43"></div>
+    <div class="star --pos44"></div>
+    <div class="small-star --pos45"></div>
+    <div class="star --pos46"></div>
+    <div class="small-star --pos47"></div>
+    <div class="star --pos48"></div>
+    <div class="small-star --pos49"></div>
+    <div class="small-star --pos50"></div>
+    <div class="small-star --pos51"></div>
+    <div class="small-star --pos52"></div>
     `
     body.appendChild(newDiv);
     const planetColor = document.querySelector(".planet-inside-planet");
