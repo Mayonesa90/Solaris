@@ -154,7 +154,6 @@ body {
 
 .--planet:hover {
     cursor: pointer;
-    /* animation: bounce 3s; */
 }
 
 .presentName {
@@ -176,8 +175,7 @@ body {
 .merkurius {
     width: 14px;
     height: 14px;
-    border-radius: 100%;
-    /* background-color: var(--MERKURIUS); */
+    border-radius: 50%;
     background: var(--MERKURIUS);
     background: linear-gradient(90deg, var(--MERKURIUS) 0%, rgba(0,0,0,1) 100%);
     animation: bounce 3s;
@@ -186,10 +184,9 @@ body {
 .venus {
     width: 26px;
     height: 26px;
-    /* background-color: var(--VENUS); */
     background: var(--VENUS);
     background: linear-gradient(90deg, var(--VENUS) 0%, rgba(0,0,0,1) 100%);
-    border-radius: 100%;
+    border-radius: 50%;
     animation: bounce 3s;
     animation-delay: 150ms;
 }
@@ -197,10 +194,9 @@ body {
 .jorden {
     width: 28px;
     height: 28px;
-    /* background-color: var(--JORDEN); */
     background: var(--JORDEN);
     background: linear-gradient(90deg, var(--JORDEN) 0%, rgba(0,0,0,1) 100%);
-    border-radius: 100%;
+    border-radius: 50%;
     animation: bounce 3s;
     animation-delay: 300ms;
 }
@@ -208,10 +204,9 @@ body {
 .mars {
     width: 14px;
     height: 14px;
-    /* background-color: var(--MARS); */
     background: var(--MARS);
     background: linear-gradient(90deg, var(--MARS) 0%, rgba(0,0,0,1) 100%);
-    border-radius: 100%;
+    border-radius: 50%;
     animation: bounce 3s;
     animation-delay: 450ms;
 }
@@ -219,10 +214,9 @@ body {
 .jupiter {
     width: 188px;
     height: 188px;
-    /* background-color: var(--JUPITER); */
     background: var(--JUPITER);
     background: linear-gradient(90deg, var(--JUPITER) 0%, rgba(0,0,0,1) 100%);
-    border-radius: 100%;
+    border-radius: 50%;
     animation: bounce 3s;
     animation-delay: 600ms;
 }
@@ -230,10 +224,9 @@ body {
 .saturnus {
     width: 144px;
     height: 144px;
-    /* background-color: var(--SATURNUS); */
     background: var(--SATURNUS);
     background: linear-gradient(90deg, var(--SATURNUS) 0%, rgba(0,0,0,1) 100%);
-    border-radius: 100%;
+    border-radius: 50%;
     animation: bounce 3s;
     animation-delay: 750ms;
 }
@@ -241,10 +234,9 @@ body {
 .uranus {
     width: 66px;
     height: 66px;
-    /* background-color: var(--URANUS); */
     background: var(--URANUS);
     background: linear-gradient(90deg, var(--URANUS) 0%, rgba(0,0,0,1) 100%);
-    border-radius: 100%;
+    border-radius: 50%;
     animation: bounce 3s;
     animation-delay: 900ms;
 }
@@ -252,10 +244,9 @@ body {
 .neptunus {
     width: 66px;
     height: 66px;
-    /* background-color: var(--NEPTUNUS); */
     background: var(--NEPTUNUS);
     background: linear-gradient(90deg, var(--NEPTUNUS) 0%, rgba(0,0,0,1) 100%);
-    border-radius: 100%;
+    border-radius: 50%;
     animation: bounce 3s;
     animation-delay: 1050ms;
 }

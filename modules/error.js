@@ -2,29 +2,14 @@
 // Denna modul skapar ett error meddelande 
 
 const searchBar = document.querySelector(".searchbar");
-// const body = document.querySelector("body");
 
 export function createErrorMsg(error) {
 
-    const errorMsg = document.createElement("p");
-    errorMsg.classList.add("errorMsg");
-    errorMsg.textContent = "Finns ingen sån planet :(";
+    const errorMsg = document.createElement("p"); // Skapar nytt p-element
+    errorMsg.classList.add("errorMsg");            // Lägger till css-klass
+    errorMsg.textContent = "Finns ingen sån planet :("; // Lägger till meddelandet som visas
 
-    if (searchBar.children.length === 2) {
+    if (searchBar.children.length === 2) { // Kontrollerar att det inte redan finns ett error meddelande
         searchBar.appendChild(errorMsg);
     }
-
-    // if (searchBar.children.length > 2) {
-    //     searchBar.removeChild(errorMsg);
-    // } else {
-        
-    // }
-    
-    // console.log(searchBar.children.length)
-
-    // searchBar.addEventListener("click", () => {
-    //     if (searchBar.children.length > 2) {
-    //         searchBar.removeChild(errorMsg);
-    //     }
-    // })
 }
