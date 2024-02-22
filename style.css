@@ -285,7 +285,7 @@ body {
 }
 
 .planet {
-    border-radius: 100%;
+    border-radius: 50%;
     width: 1404px;
     height: 1404px;    
     background-color: rgba(66, 142, 212, 0.06);
@@ -295,10 +295,11 @@ body {
     position: absolute;
     left: -1200px;
     z-index: 1;
+    top: -300px;
 }
 
 .planet-inside {
-    border-radius: 100%;
+    border-radius: 50%;
     width: 1340px;
     height: 1340x;
     background-color: rgba(66, 142, 212, 0.1);
@@ -310,11 +311,23 @@ body {
 }
 
 .planet-inside-planet {
-    border-radius: 100%;
-    background-color: var(--jorden);
+    border-radius: 50%;
+    background-color: var(--SOLEN);
     width: 1278px;
     height: 1278px;
     z-index: 3;
+}
+
+.planet-inside-planet--solen {
+    border-radius: 50%;
+    background-color: var(--SOLEN);
+    width: 1278px;
+    height: 1278px;
+    z-index: 3;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .container {
@@ -540,3 +553,40 @@ body {
     top: 811px;
     right: 632px;
 }
+
+
+/* Solen */
+
+/* .planet-sol {
+    border-radius: 50%;
+    width: 1404px;
+    height: 1404px;    
+    background-color: rgba(66, 142, 212, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: -1200px;
+    top: -300px;
+    z-index: 1;
+}
+
+.planet-inside-sol {
+    border-radius: 50%;
+    width: 1340px;
+    height: 1340x;
+    background-color: rgba(66, 142, 212, 0.1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 60px;
+    z-index: 2;
+}
+
+.planet-inside-planet-sol {
+    border-radius: 50%;
+    background-color: var(--SOLEN);
+    width: 1278px;
+    height: 1278px;
+    z-index: 3;
+} */

@@ -10,7 +10,7 @@ let planets = await getPlanets();
 
 
 // Node selection
-const solBtn = document.querySelector(".solen"),
+const solBtn = document.querySelector(".planet-inside-planet--solen"),
     merBtn = document.querySelector(".merkurius"),
     venBtn = document.querySelector(".venus"),
     jorBtn = document.querySelector(".jorden"),
