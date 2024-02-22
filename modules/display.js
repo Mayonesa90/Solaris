@@ -93,7 +93,8 @@ function generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, dis
     body.appendChild(newDiv);
     const planetColor = document.querySelector(".planet-inside-planet");
     planetColor.style.backgroundColor = `var(--${name})` // Här ändrar planeten färg till den matchande variabeln
-    
+    planetColor.style.background = `linear-gradient(90deg, var(--${name}) 97%, rgba(255,255,255,1) 100%)`;
+
     newDiv.addEventListener("click", () => {
         body.removeChild(newDiv) // Tar bort diven när man klickar på den
         window.scrollTo(500, 0); // Scrollar så man kommer överst på sidan igen
