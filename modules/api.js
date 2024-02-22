@@ -1,6 +1,11 @@
+// BESKRIVNING
+// Denna modul är till för API funktionen
+
 // Global variables
 let url = "https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com";
 let planets;
+
+
 // Functions
 export async function getPlanets(planet) {
     try {

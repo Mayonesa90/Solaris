@@ -2,14 +2,21 @@
 // Denna modul är till för att sätta ihop informationen om den gällande planeten
 // i en div som displayas
 
-const body = document.querySelector("body");
+// Global variables
 let moonString;
 
+
+// Node selection
+const body = document.querySelector("body");
+
+
+// Functions
+// 1. Sparar informationen från API-funktionen i variabler
 export function displayPlanet(planets, currentPlanet) {
 
-    let planetInfo = planets.filter((planet, i) => i === currentPlanet);
+    let planetInfo = planets.filter((planet, i) => i === currentPlanet); // Här sparas det filtrerade resultatet (="planeter") i en ny variabel (="planetInfo") genom att kolla vilket index som stämmer överens med rätt planet
 
-    planetInfo.forEach((planet) => {
+    planetInfo.forEach((planet) => { // Här utförs en funktion på den filtrerade planeten som sparar värden i variabler som sedan skickas vidare till funktionen som skapar diven
     const name = planet.name.toUpperCase(),
     latinName = planet.latinName.toUpperCase(),
     desc = planet.desc,
@@ -20,17 +27,15 @@ export function displayPlanet(planets, currentPlanet) {
     moons = (planet.moons.length > 0) ? planet.moons.map((moon) => moon).join(", ") : "Inga månar" ; // Kollar om planeten har månar och skapar en ny sträng med mellanrum om den har det, annars ersätts det med en text
     return generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, distFromSun, moons)
     })   
-    
-
 }
 
-
+// 2. Som sedan skickas vidare till denna funktion som sätter ihop diven
 function generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, distFromSun, moons) {
     
     let newDiv;
-    newDiv = document.createElement("div");
-    newDiv.classList.add("newDiv");
-    newDiv.innerHTML = `
+    newDiv = document.createElement("div"); // Skapar ett nytt div-element
+    newDiv.classList.add("newDiv"); // Lägger till css-klass för styling, nedan lägger till innehållet i diven med information från funktionen ovan
+    newDiv.innerHTML = ` 
     <div class="planet">
         <div class="planet-inside">
             <div class="planet-inside-planet"></div>
@@ -90,7 +95,8 @@ function generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, dis
     planetColor.style.backgroundColor = `var(--${name})` // Här ändrar planeten färg till den matchande variabeln
     
     newDiv.addEventListener("click", () => {
-        body.removeChild(newDiv)
+        body.removeChild(newDiv) // Tar bort diven när man klickar på den
+        window.scrollTo(500, 0); // Scrollar så man kommer överst på sidan igen
     } )
    
 }

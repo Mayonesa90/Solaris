@@ -1,8 +1,11 @@
 // BESKRIVNING
 // Denna modul skapar ett error meddelande 
 
+// Node selection
 const searchBar = document.querySelector(".searchbar");
 
+
+// Functions
 export function createErrorMsg(error) {
 
     const errorMsg = document.createElement("p"); // Skapar nytt p-element

@@ -1,12 +1,15 @@
 "use-strict"; // Strict mode
 
-// Import 
+// Import modules
 import { getPlanets } from "./modules/api.js";
 import { displayPlanet } from "./modules/display.js";
 import { presentation } from "./modules/presentation.js";
 import { createErrorMsg } from "./modules/error.js";
 
-let planets = await getPlanets();
+
+// Global variables
+let planets = await getPlanets(); // sparar alla planeterna i en variabel när api funktionen är klar
+let searchPlanet;
 
 
 // Node selection
@@ -20,11 +23,11 @@ const solBtn = document.querySelector(".planet-inside-planet--solen"),
     uraBtn = document.querySelector(".uranus"),
     nepBtn = document.querySelector(".neptunus"),
     searchParam = document.querySelector("#searchParam"),
-    searchBtn = document.querySelector("#searchBtn");
+    searchBtn = document.querySelector("#searchBtn"),
+    searchBar = document.querySelector(".searchbar");
 
 
-// Event listeners - PLANETS CLICK
-
+// Event listener - PLANETS CLICK
 solBtn.addEventListener("click", () => {
     displayPlanet(planets, 0);
 })
@@ -54,53 +57,42 @@ nepBtn.addEventListener("click", () => {
 })
 
 
-// Event listeners - PLANETS HOVER
-
+// Event listener - PLANETS HOVER
 solBtn.addEventListener("mouseenter", () => {
     presentation(solBtn, "SOLEN");
 })
-
 merBtn.addEventListener("mouseenter", () => {
     presentation(merBtn, "MERKURIUS");
 })
-
 venBtn.addEventListener("mouseenter", () => {
     presentation(venBtn, "VENUS");
 })
-
 jorBtn.addEventListener("mouseenter", () => {
     presentation(jorBtn, "JORDEN");
 })
-
 marBtn.addEventListener("mouseenter", () => {
     presentation(marBtn, "MARS");
 })
-
 jupBtn.addEventListener("mouseenter", () => {
     presentation(jupBtn, "JUPITER");
 })
-
 satBtn.addEventListener("mouseenter", () => {
     presentation(satBtn, "SATURNUS");
 })
-
 uraBtn.addEventListener("mouseenter", () => {
     presentation(uraBtn, "URANUS");
 })
-
 nepBtn.addEventListener("mouseenter", () => {
     presentation(nepBtn, "NEPTUNUS");
 })
 
-// Event listeners - SEARCHBAR
-
+// Event listener - SEARCHBAR
 searchBtn.addEventListener("click", () => {
 
-    let searchPlanet;
+    // let searchPlanet;
     
-
-    switch (searchParam.value.toUpperCase()) {
-        case "SOLEN":
+    switch (searchParam.value.toUpperCase()) { // Här tar den sökordet, gör om till uppercase, och ser om den matchar följande cases. 
+        case "SOLEN":                          // Om den gör det skickas rätt värde till display funktionen, om inget matchar kallar den på errorfunktionen
             searchPlanet = 0;
             break;
         case "MERKURIUS":
@@ -130,24 +122,22 @@ searchBtn.addEventListener("click", () => {
         default:
             createErrorMsg();
     }
-    displayPlanet(planets, searchPlanet)
-    searchParam.value = "";
+    displayPlanet(planets, searchPlanet) // Skickar planeterna som sparats i en variabel samt värdet på aktuell planet 
+    searchParam.value = ""; // Återställer sökrutan efter man klickat
 })
 
 
-// Tar bort placeholder vid klick och lägger tillbaks vid mouseout
-
-const searchBar = document.querySelector(".searchbar");
+// Event listener - SEARCHBAR
 
 searchParam.addEventListener("click", () => {
     
-    if (searchBar.children.length > 2) {
+    if (searchBar.children.length > 2) { // Tar bort eventuellt felmeddelande när man klickar på sökrutan
         searchBar.removeChild(searchBar.children[2]);
         } 
 
-    searchParam.placeholder = "";
+    searchParam.placeholder = ""; // Gör sökrutan tom om man klickar på den (tar bort placeholdern)
     
-    searchParam.addEventListener("mouseout", () => {
+    searchParam.addEventListener("mouseout", () => { // Lägger till placeholdertext igen när musen är utanför sökrutan
         searchParam.placeholder = "Sök planet här...";
     })
 
