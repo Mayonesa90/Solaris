@@ -319,7 +319,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     margin-right: 60px;
-    z-index: 2;
+    z-index: 1;
 }
 
 .planet-inside-planet {
@@ -327,7 +327,7 @@ body {
     background-color: var(--SOLEN);
     width: 1278px;
     height: 1278px;
-    z-index: 3;
+    z-index: 1;
 }
 
 .planet-inside-planet--solen {
