@@ -13,9 +13,9 @@ export function displayPlanet(planets, currentPlanet) {
     const name = planet.name.toUpperCase(),
     latinName = planet.latinName.toUpperCase(),
     desc = planet.desc,
-    circumference = planet.circumference.toLocaleString(),
+    circumference = planet.circumference.toLocaleString(), // Adds spaces to result
     maxTemp = planet.temp.day,
-    distFromSun = planet.distance.toLocaleString(),
+    distFromSun = planet.distance.toLocaleString(), // Adds spaces to result
     minTemp = planet.temp.night,
     moons = (planet.moons.length > 0) ? planet.moons.map((moon) => moon).join(", ") : "Inga månar" ; // Kollar om planeten har månar och skapar en ny sträng med mellanrum om den har det, annars ersätts det med en text
     return generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, distFromSun, moons)
@@ -46,7 +46,7 @@ function generateDiv(name, latinName, desc, circumference, maxTemp, minTemp, dis
             <div class="fact"><strong>MAX TEMPERATUR</strong>${maxTemp} ℃</div>
             <div class="fact"><strong>MIN TEMPERATUR</strong>${minTemp} ℃</div>
         </div>
-        <div class="fact --last-fact"><strong>MÅNAR</strong>${moons}</div>
+        <div class="fact"><strong>MÅNAR</strong>${moons}</div>
     </div>
     <div class="star --pos1"></div>
     <div class="star --pos2"></div>

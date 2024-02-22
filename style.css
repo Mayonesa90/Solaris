@@ -5,11 +5,13 @@
 
 /* Keyframes */
 
-/* Bouncy planets when page loads */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
-    40% {transform: translateY(-30px);} 
-    60% {transform: translateY(-15px);} 
+/* Drop planets when page loads */
+@keyframes drop {
+    0% {transform: translateY(-600px)}
+    /* 30%, 60%, 80%, 100% {transform: translateY(0);} 
+    50% {transform: translateY(-30px);} 
+    60% {transform: translateY(-15px);}  */
+    100% {transform: translateY(0);}
  }  
 
  /* Name of planets animation */
@@ -22,7 +24,9 @@
 @keyframes fade {
     0%,100% { opacity: 0 }
     50% { opacity: 1 }
-  }
+}
+
+
 
 
 /* CSS reset */
@@ -32,7 +36,7 @@
 
 /* Root variables */
 :root {
-    --SOLEN: #FFD029;
+    --SOLEN: #f7d558;
     --MERKURIUS: #888888;
     --VENUS: #E7CDCD;
     --JORDEN: #428ED4;
@@ -193,7 +197,8 @@ body {
     border-radius: 50%;
     background: var(--MERKURIUS);
     background: linear-gradient(90deg, var(--MERKURIUS) 0%, rgba(0,0,0,1) 100%);
-    animation: bounce 3s;
+    animation: drop 2s;
+    animation-fill-mode: backwards;
 }
 
 .venus {
@@ -202,8 +207,9 @@ body {
     background: var(--VENUS);
     background: linear-gradient(90deg, var(--VENUS) 0%, rgba(0,0,0,1) 100%);
     border-radius: 50%;
-    animation: bounce 3s;
+    animation: drop 2s;
     animation-delay: 150ms;
+    animation-fill-mode: backwards;
 }
 
 .jorden {
@@ -212,8 +218,9 @@ body {
     background: var(--JORDEN);
     background: linear-gradient(90deg, var(--JORDEN) 0%, rgba(0,0,0,1) 100%);
     border-radius: 50%;
-    animation: bounce 3s;
+    animation: drop 2s;
     animation-delay: 300ms;
+    animation-fill-mode: backwards;
 }
 
 .mars {
@@ -222,8 +229,9 @@ body {
     background: var(--MARS);
     background: linear-gradient(90deg, var(--MARS) 0%, rgba(0,0,0,1) 100%);
     border-radius: 50%;
-    animation: bounce 3s;
+    animation: drop 2s;
     animation-delay: 450ms;
+    animation-fill-mode: backwards;
 }
 
 .jupiter {
@@ -232,8 +240,9 @@ body {
     background: var(--JUPITER);
     background: linear-gradient(90deg, var(--JUPITER) 0%, rgba(0,0,0,1) 100%);
     border-radius: 50%;
-    animation: bounce 3s;
+    animation: drop 2s;
     animation-delay: 600ms;
+    animation-fill-mode: backwards;
 }
 
 .saturnus {
@@ -242,8 +251,9 @@ body {
     background: var(--SATURNUS);
     background: linear-gradient(90deg, var(--SATURNUS) 0%, rgba(0,0,0,1) 100%);
     border-radius: 50%;
-    animation: bounce 3s;
+    animation: drop 2s;
     animation-delay: 750ms;
+    animation-fill-mode: backwards;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -264,8 +274,9 @@ body {
     background: var(--URANUS);
     background: linear-gradient(90deg, var(--URANUS) 0%, rgba(0,0,0,1) 100%);
     border-radius: 50%;
-    animation: bounce 3s;
+    animation: drop 2s;
     animation-delay: 900ms;
+    animation-fill-mode: backwards;
 }
 
 .neptunus {
@@ -274,8 +285,9 @@ body {
     background: var(--NEPTUNUS);
     background: linear-gradient(90deg, var(--NEPTUNUS) 0%, rgba(0,0,0,1) 100%);
     border-radius: 50%;
-    animation: bounce 3s;
+    animation: drop 2s;
     animation-delay: 1050ms;
+    animation-fill-mode: backwards;
 }
 
 /* Footer */
@@ -377,10 +389,6 @@ body {
     flex-direction: column;
 }
 
-/* .--last-fact {
-    width: 100px
-} */
-
 /* Bakgrundsstjärnor */
 
 .star {
@@ -433,26 +441,31 @@ body {
 .--pos6 {
     top: 210px;
     right: 320px;
+    animation: fade 3500ms infinite;
 }
 
 .--pos7 {
     top: 207px;
     right: 410px;
+    animation: fade 6700ms infinite;
 }
 
 .--pos8 {
     top: 385px;
     right: 109px;
+    animation: fade 2800ms infinite;
 }
 
 .--pos9 {
     top: 385px;
     right: 276px;
+    animation: fade 7950ms infinite;
 }
 
 .--pos10 {
     top: 306px;
     right: 358px;
+    animation: fade 3640ms infinite;
 }
 
 .--pos11 {
@@ -464,63 +477,73 @@ body {
 .--pos12 {
     top: 448px;
     right: 185px;
+    animation: fade 4510ms infinite;
 }
 
 .--pos13{
     top: 602px;
     right: 115px;
+    animation: fade 3710ms infinite;
 }
 
 .--pos14 {
     top: 833px;
     right: 50px;
+    animation: fade 1810ms infinite;
 }
 
 .--pos15 {
     top: 548px;
     right: 206px;
+    animation: fade 1870ms infinite;
 }
 
 .--pos16 {
     top: 305px;
     right: 508px;
-    animation: fade 1s infinite;
+    animation: fade 3050ms infinite;
 }
 
 .--pos17 {
     top: 302px;
     right: 598px;
+    animation: fade 2600ms infinite
 }
 
 .--pos18 {
     top: 268px;
     right: 697px;
-    animation: fade 3s infinite;
+    animation: fade 3200ms infinite;
 }
 
 .--pos19 {
     top: 328px;
     right: 860px;
+    animation: fade 4600ms infinite
 }
 
 .--pos20 {
     top: 255px;
     right: 984px;
+    animation: fade 2300ms infinite
 }
 
 .--pos21 {
     top: 284px;
     right: 1155px;
+    animation: fade 3600ms infinite
 }
 
 .--pos22 {
     top: 353px;
     right: 555px;
+    animation: fade 4240ms infinite
 }
 
 .--pos23 {
     top: 388px;
     right: 508px;
+    animation: fade 2340ms infinite
 }
 
 .--pos24 {
@@ -537,6 +560,7 @@ body {
 .--pos26 {
     top: 764px;
     right: 300px;
+    animation: fade 3700ms infinite;
 }
 
 .--pos27 {
@@ -548,41 +572,49 @@ body {
 .--pos28 {
     top: 511px;
     right: 411px;
+    animation: fade 1240ms infinite
 }
 
 .--pos29 {
     top: 401px;
     right: 387px;
+    animation: fade 3700ms infinite;
 }
 
 .--pos30 {
     top: 436px;
     right: 699px;
+    animation: fade 9240ms infinite
 }
 
 .--pos31 {
     top: 512px;
     right: 626px;
+    animation: fade 4240ms infinite
 }
 
 .--pos32 {
     top: 643px;
     right: 523px;
+    animation: fade 5740ms infinite
 }
 
 .--pos33 {
     top: 764px;
     right: 467px;
+    animation: fade 2370ms infinite
 }
 
 .--pos34 {
     top: 659px;
     right: 678px;
+    animation: fade 3700ms infinite;
 }
 
 .--pos35 {
     top: 501px;
     right: 775px;
+    animation: fade 3770ms infinite
 }
 
 .--pos36 {
@@ -590,40 +622,3 @@ body {
     right: 632px;
     animation: fade 4s infinite;
 }
-
-
-/* Solen */
-
-/* .planet-sol {
-    border-radius: 50%;
-    width: 1404px;
-    height: 1404px;    
-    background-color: rgba(66, 142, 212, 0.06);
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: absolute;
-    left: -1200px;
-    top: -300px;
-    z-index: 1;
-}
-
-.planet-inside-sol {
-    border-radius: 50%;
-    width: 1340px;
-    height: 1340x;
-    background-color: rgba(66, 142, 212, 0.1);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-right: 60px;
-    z-index: 2;
-}
-
-.planet-inside-planet-sol {
-    border-radius: 50%;
-    background-color: var(--SOLEN);
-    width: 1278px;
-    height: 1278px;
-    z-index: 3;
-} */
