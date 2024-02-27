@@ -19,6 +19,7 @@ export async function getPlanets(planet) {
                     {"x-zocom": `${key}`}
                 })
         const data = await resp2.json(); // Sparar svaret i variabel
+        // console.log(resp2)
         return planets = data.bodies; // Tar ut alla planeterna och sparar i en variabel som går att nå via main
     } catch (error) {
         console.log(error)
