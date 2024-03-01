@@ -5,13 +5,11 @@ import { getPlanets } from "./modules/api.js";
 import { displayPlanet } from "./modules/display.js";
 import { presentation } from "./modules/presentation.js";
 import { createErrorMsg } from "./modules/error.js";
-// import { identifyPlanet } from "./modules/identify.js";
 
 
 // Global variables
 let planets = await getPlanets(); // sparar alla planeterna i en variabel när api funktionen är klar
 let searchPlanet;
-// let searchPlanet = await identifyPlanet();
 
 
 // Node selection
@@ -88,6 +86,7 @@ nepBtn.addEventListener("mouseenter", () => {
     presentation(nepBtn, "NEPTUNUS");
 })
 
+
 // Event listener - SEARCHBAR
 searchBtn.addEventListener("click", () => {
     
@@ -126,7 +125,7 @@ searchParam.addEventListener("keypress", (event) => {
     } 
 })
 
-
+// FUNKTION - identifiera rätt planet
 
 function identifyPlanet(searchValue) {
     switch (searchValue) { // Här tar den sökordet och ser om den matchar följande cases. 
